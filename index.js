@@ -8,7 +8,7 @@ const socket = require("socket.io");
 require("dotenv").config();
 
 app.use(cors({
-    origin: "http://localhost:5173", // Correct the origin to match your front-end
+    origin: "https://frontendchat-knx1.onrender.com", // Correct the origin to match your front-end
     methods: ["GET", "POST"],
     credentials: true
 }));
@@ -31,7 +31,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
     cors: {
-        origin: "http://localhost:5173", // Correct the origin to match your front-end
+        origin: "https://frontendchat-knx1.onrender.com", // Correct the origin to match your front-end
         methods: ["GET", "POST"],
         credentials: true // Correct the property name to credentials
     }
